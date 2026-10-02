@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: miniwallet
+  datasource:
+    url: jdbc:postgresql://localhost:5432/miniwallet
+    username: miniwallet
+    password: miniwallet
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
